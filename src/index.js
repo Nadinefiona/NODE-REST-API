@@ -1,11 +1,10 @@
 import mongoose from "mongoose";
-import dotenv from "dotenv";
 import app from "./app";
 
-dotenv.config({ path: "./config.env" });
+
 mongoose.set("strictQuery", false);
 mongoose
-  .connect(process.env.DATABASE_LOCAL, {})
+  .connect("mongodb+srv://nadine_100:Th0uWOS7nvTCz2nM@cluster0.6zhup.mongodb.net/?retryWrites=true&w=majority.DATABASE_LOCAL", {})
   .then(() => {
     console.log("DB connected!");
   })
